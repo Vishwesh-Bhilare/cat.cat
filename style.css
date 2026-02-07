@@ -50,3 +50,146 @@ button.red {
 button.red:active {
   transform: scale(0.95);
 }
+
+#title {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ff6b6b;
+  text-shadow: 3px 3px 0 #ffd166;
+  animation: titleBounce 2s infinite alternate;
+}
+
+@keyframes titleBounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10px); }
+}
+
+#cat-container {
+  position: relative;
+  overflow: visible;
+}
+
+#thought-bubble {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+  transition: all 0.3s;
+}
+
+button.purple {
+  background: #9d4edd;
+}
+
+button.blue {
+  background: #4d7cff;
+}
+
+button.green {
+  background: #4caf50;
+}
+
+button.rainbow {
+  background: linear-gradient(90deg, 
+    red, orange, yellow, green, blue, indigo, violet
+  );
+  color: white;
+  font-weight: bold;
+}
+
+button.secret {
+  background: black;
+  color: white;
+  border: 2px dashed white;
+}
+
+#special-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+#stats {
+  display: flex;
+  gap: 30px;
+  margin: 15px 0;
+  font-size: 18px;
+  background: rgba(255,255,255,0.1);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+#fun-fact {
+  margin-top: 30px;
+  padding: 10px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  font-style: italic;
+  opacity: 0.7;
+  transition: all 0.5s;
+}
+
+#achievements {
+  margin-top: 20px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.achievement {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 10px;
+  background: gold;
+  color: black;
+  border-radius: 20px;
+  opacity: 0.3;
+}
+
+.achievement.unlocked {
+  opacity: 1;
+  animation: achievementPop 0.5s;
+}
+
+@keyframes achievementPop {
+  0% { transform: scale(0); }
+  70% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Party mode effects */
+.party-mode {
+  animation: partyLights 0.3s infinite;
+}
+
+@keyframes partyLights {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+/* Hat effect */
+.cat-hat::after {
+  content: "🎩";
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px;
+}
+
+/* Bouncing cat */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.bounce {
+  animation: bounce 0.5s infinite;
+}
