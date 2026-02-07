@@ -2,21 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>cat</title>
+  <title>SILLY CAT SIMULATOR 3000</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
+  <div id="title">🐱 ULTIMATE CAT SUMMONER 9000 🐱</div>
   <div id="counter">you have summoned the cat 0 times</div>
 
   <div id="cat-container">
     <img id="cat" src="cats/cat1.jpg" alt="cat">
+    <div id="thought-bubble">😴</div>
+  </div>
+
+  <div id="stats">
+    <div>Cat Energy: <span id="energy">100%</span></div>
+    <div>Silliness Level: <span id="silliness">0%</span></div>
   </div>
 
   <div id="buttons">
-    <button id="meowBtn" class="red"></button>
-    <button id="spinBtn" class="red"></button>
+    <button id="meowBtn" class="red" title="SUMMON CAT">
+      <i class="fas fa-cat"></i>
+    </button>
+    <button id="spinBtn" class="red" title="SPIN CAT">
+      <i class="fas fa-sync-alt"></i>
+    </button>
+    <button id="partyBtn" class="purple" title="PARTY MODE">
+      <i class="fas fa-party-horn"></i>
+    </button>
+    <button id="laserBtn" class="blue" title="LASER POINTER">
+      <i class="fas fa-dot-circle"></i>
+    </button>
   </div>
+
+  <div id="special-buttons">
+    <button id="hatBtn" class="green">Give Hat 🎩</button>
+    <button id="rainbowBtn" class="rainbow">Rainbow Mode 🌈</button>
+    <button id="secretBtn" class="secret">???</button>
+  </div>
+
+  <div id="achievements">
+    <h3>Achievements <span id="achievement-count">0/10</span></h3>
+    <div id="achievement-list"></div>
+  </div>
+
+  <div id="fun-fact">Fun Fact: Cats can make over 100 different sounds!</div>
 
   <script src="script.js"></script>
 </body>
